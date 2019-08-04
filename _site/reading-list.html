@@ -67,22 +67,15 @@ Jekyll integration by Chris Bobbe | chrisbobbe.github.io
 	<article class="shade-two">
 	  <div class="container">
 			<header>
-				<h2>Reading List</h2><p>a list of books I read</p></header><p>I love books! Here are some I’m reading now:</p>
-
-<ol>
-  <li>Robert Burton: <em>The Anatomy of Melancholy</em></li>
-  <li>Robert Musil: <em>The Man Without Qualities</em></li>
-  <li>Kazuo Ishiguro: <em>The Unconsoled</em></li>
-  <li>Malcolm Lowry: <em>Under the Volcano</em></li>
-  <li>Virginia Woolf: <em>The Waves</em></li>
-  <li>James Joyce: <em>Finnegans Wake</em></li>
-  <li>Thomas Wolfe: <em>Look Homeward, Angel</em></li>
-  <li>William Thackeray: <em>Pendennis</em></li>
-  <li>Karl Marx: <em>Capital</em></li>
-  <li>James Woodforde: <em>The Diary of A Country Parson</em></li>
-</ol>
-
-<p>source: <a href="https://www.theguardian.com/books/booksblog/2011/jan/04/best-boring-books">The Guardian</a></p>
+				<h2>Reading List</h2><p>a list of books I read</p></header><h4>Category</h4>
+<ul>
+    //这里使用了 Jekyll 语法，会被编译，所以加多个"\"
+    {\% for category in site.categories %\}
+    <li><a href="/categories/{\{ category | first }\}/" title="view all
+posts">{\{ category | first }\} {\{ category | last | size }\}</a>
+    </li>
+    {\% endfor %\}
+</ul>
 </div>
 	</article>
 </div><!-- Footer -->
