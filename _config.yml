@@ -9,14 +9,6 @@ avatar: assets/images/avatar.jpg
 baseurl: ""
 url: "https://jufengwu.github.io/"
 
-# Social settings
-
-linkedin_url:  https://www.linkedin.com/in/ju-feng-wu-71a0a8146/
-github_url: https://github.com/JuFengWu
-
-
-# Google Analytics Tracking ID goes here:
-google_analytics: UA-145114924-1
 
 # The following settings are NECESSARY for the Prologue theme to run:
 remote_theme: chrisbobbe/jekyll-theme-prologue
