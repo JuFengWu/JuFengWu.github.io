@@ -6,8 +6,12 @@ email: leowu102000@gmail.com
 avatar: assets/images/avatar.jpg
 
 # You'll want to customize url and baseurl for your own site:
-baseurl: "/home"
+baseurl: ""
 url: "https://jufengwu.github.io/"
+
+linkedin_url:  https://www.linkedin.com/in/ju-feng-wu-71a0a8146/
+github_url: https://github.com/JuFengWu
+google_analytics: UA-145114924-1
 
 
 # The following settings are NECESSARY for the Prologue theme to run:
