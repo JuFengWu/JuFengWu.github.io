@@ -25,6 +25,10 @@ docker pull <image_name>:<tag>
 <br/>4.把image儲存起來
 ```
 docker save <image> > <file_name>
+
+or
+
+docker save -o <file_name> <image>
 ```
 <br/> 5.把儲存的image匯入
 ```
