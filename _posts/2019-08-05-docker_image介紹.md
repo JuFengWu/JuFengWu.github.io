@@ -16,7 +16,7 @@ docker images
 
 <br/>2.從網路上(docker hub)尋找新的 image
 ```
-docker search <key_world>
+docker search <key_word>
 ```
 <br/>3.下載網路上(docker hub)的image
 ```
@@ -34,6 +34,8 @@ docker save -o <file_name> <image>
 ```
 docker load <  <file_name>
 or
+docker load -i <file_name> //-i 代表load tar檔案
+or
 docker import  <file_name>
 ```
 注意： import 和 load 有一些地方不一樣<br/>
@@ -44,5 +46,10 @@ b. load不會失去之前的歷史，import會失去之前的歷史<br/>
 ```
 docker build -t <image_name>:<tag> .
 ```
+</br>7.移除image 
+```
+docker rmi <image_id> <option>
+```
+option: -f 強制移除，代表這一個image有在系統內container，會連同contianer一起移除
 
 <br/>目前大概就這樣，有發現新的再繼續加入
