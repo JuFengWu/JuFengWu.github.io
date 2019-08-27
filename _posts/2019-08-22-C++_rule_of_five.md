@@ -7,6 +7,7 @@ layout: post
 ----------------------
 什麼是rule of five（五法則）?<br/> 
 基本上就是幫你有寫出這五個其中一個東西的時候，剩下四個也最好複寫，雖然compiler會幫你作掉一些，但是有可能會出現不可預期的錯誤<br/>
+
 在c++11 (modern c++)之前有三法則，分別是<br/>
 1.copy construct<br/>
 2.destructor <br/>

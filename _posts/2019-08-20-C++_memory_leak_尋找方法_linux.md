@@ -6,6 +6,7 @@ layout: post
 
 ----------------------
 相對於python,c#,java, 寫 c++和c最頭痛的大概就就是memory leak的問題<br/>
+
 雖然c++有smart pointer（之後會提到）,但是有的時候還是要必須要用傳統的new 以及delete的時候,確定有沒有memory leak就是很重要的一件事情了,特別是這一隻程式需要被執行很久的時候<br/>
 所以這次就來教一下memory leak的好工具Valgrind ！（linux專用喔！）<br/>
 

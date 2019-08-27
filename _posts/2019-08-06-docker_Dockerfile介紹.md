@@ -6,6 +6,7 @@ layout: post
 
 ----------------------
 上一篇有提到，docker 可以說由兩個東西組成，image 和 container 這一篇<br/>
+
 我們就一起來討論從docker file 建立image的指令吧！ <br/>
 常用的指令如下：
 <br/>

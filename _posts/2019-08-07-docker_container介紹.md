@@ -6,9 +6,9 @@ layout: post
 
 ----------------------
 docker 的container 是跑在image之上，所以要使用docker必須要先產生container <br/>
+
 此外，container有兩種狀態，up 和exit，up為已經呼叫起來的狀態，exit為沒有被呼叫起來 <br/>
-這次就介紹一些常用的container命令吧！
- <br/>
+這次就介紹一些常用的container命令吧！<br/>
 1. 顯示所有的container
 ```
 docler ps -a

@@ -5,7 +5,8 @@ layout: post
 ---
 
 ----------------------
-Makefile是使用gcc下指令的好幫手，畢竟當檔案連結越來越大的時候,一直下gcc大概會累死<br/>
+Makefile是使用gcc下指令的好幫手，畢竟當檔案連結越來越大的時候,一直下gcc大概會累死<br/> 
+
 寫好Makefile之後，只需要下``make``就可以自動編譯了，非常的方便<br/>
 一個專案的架構大概如此[範例](https://github.com/JuFengWu/cpp_examples/tree/master/make_file_example)<br/>
 裡面有可能有src(source code放的位置)，indclude(h file 的位置)，以及test(test code的位置)<br/>
