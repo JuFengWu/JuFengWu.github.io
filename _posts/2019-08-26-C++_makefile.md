@@ -15,10 +15,10 @@ Makefile是使用gcc下指令的好幫手，畢竟當檔案連結越來越大的
 在一個makefile中，可以看到一開始會有一些宣告，例如<br/>
 ```
 CC = g++
-GOOGLE_TEST_LIB = gtest
-GOOGLE_TEST_INCLUDE = /usr/local/include
-INCLUDE_DIR = ./include
-G++_FLAGS = -c -Wall -I $(GOOGLE_TEST_INCLUDE) -I $(INCLUDE_DIR)
+INSTDIR = /usr/local/bin
+INCLUDE = ./include
+CFLAGS = -g -std=gnu++11 -Wall 
+LIBS += -framework CoreFoundation
 ```
 這一些是表示之後參數的別名，之後就可以用縮寫的方式來進行編譯<br/><br/>
 接下來會使用all，例如<br/>

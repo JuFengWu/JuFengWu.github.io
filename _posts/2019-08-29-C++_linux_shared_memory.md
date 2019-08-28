@@ -8,6 +8,26 @@ layout: post
 兩個執行檔如果要資料交換，除了使用tcp/ip之外，還可以使用shared memory的方式來進行資料交換<br/>
 
 然而使用shared memory進行資料交換要注意關於鎖的機制，以免當其中一個存取的時候，另一個也來存取<br/>
+在shared memory的[範例]中()，我們創立了兩個檔案，一個是client,另一個是server<br/>
+server寫入資料到shared memory中，client讀此資料（所以server要先打開），然後client在寫*的符號，server看到這一個符號就離開<br/>
+先看client的程式碼，其中有一段`` shmid = shmget(key, SHMSZ, 0666)) < 0 ``，這是get shared memory的函數<br/>
+其中``int shmget(key_t key, size_t size, int shmflg);``的參數意思為:<br/>
+key: 產生一個新的shared memory區段<br/>
+size: shared memory的大小，以Byte為單位
+shmflg: 其中shmflg有三種參數可以使用，分別為<br/>
+A. S_IRUSR: 讀記憶體分段<br/>
+B. S_IWUSR: 寫記憶體分段<br/>
+C. IPC_CREAT :確保開啟的記憶體是新的,而不是現存的記憶體.<br/>
+D. | 0666 : 作為校驗 ,  ubuntu要加<br/>
+成功：回傳 shared memory的key<br/>
+失敗：回傳-1<br/>
+所以在例子中，寫法為
+```
+if ((shmid = shmget(key, SHMSZ, 0666)) < 0) {
+        perror("shmget");//描述錯誤訊息到stderr
+        exit(1);
+    }
+```
 
 
 
