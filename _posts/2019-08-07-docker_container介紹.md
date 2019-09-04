@@ -53,3 +53,8 @@ b.option的指令如下： <br/>
 -c use docker file to commit  <br/>
 -m: add memo <br/>
 -p: suspend container when commit <br/>
+
+9. 幫container重新命名
+```
+docker rename old_container_name  new_container_name
+```
