@@ -18,12 +18,14 @@ docler ps -a
 docker run <options> <image_name> <command> <args>
 ex:
 docker run -it --rm -p 6080:80 docker_ros_melodic_vnc_techman
-docler rin -it docker_ros_melodic ./bin/bash
+docler run -it docker_ros_melodic ./bin/bash
+docker run -it -v /home/leowu/ros2:/root/ros2  -p 6080:80 ros_env:ver1
 ```
 其中，一些常用的options如下：
 a. -it : interaction and terminal
 b. -rm: remove after exit
-c. -p set port
+c. -p: set port
+d. -v: 讓現有資料夾和container的資料夾共用,A:B的意思中A是指本機端的資料夾B是此container內的資料夾
 3. 呼叫起現有的container
 ```
 docker start <container_name>
