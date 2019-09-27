@@ -1,5 +1,5 @@
 ---
-title: ROS2 launch file
+title: Ros 2 launch file
 author: Jufeng Wu
 layout: post
 ---

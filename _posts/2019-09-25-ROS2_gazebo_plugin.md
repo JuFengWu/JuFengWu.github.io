@@ -1,5 +1,5 @@
 ---
-title: ROS2 gazebo plugin
+title: Ros 2 gazebo plugin
 author: Jufeng Wu
 layout: post
 ---
