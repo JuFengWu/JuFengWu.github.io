@@ -54,5 +54,10 @@ b. 去複寫 XXX::Load<br/>
 c. 在load的時候,加入<br/>``this->updateConnection = gazebo::event::Events::ConnectWorldUpdateBegin(std::bind(&XXX::OnUpdate, this));``<br/>
 d. 創立OnUpdate，這是每次畫面更新的時候的動作<br/>
 e. 記得要加入 GZ_REGISTER_MODEL_PLUGIN(TMGazeboPluginRos)<br/>
+4.gazebo plugin 有幾個像是bug的東西最好避開
+
+a. printf() 要避開，最好使用std::cout，如果誤用的話，會發現當按下crt+c的時候，要print的東西才會出現，並且後面的程式碼就無法執行了
+b. ros的 RCLCPP_INFO 也要避開，最好也使用std::cout，如果誤用的話會跟上述一樣
+c. 不同的 cpp 都 include gazebo plugin的部份.h，因為疑似有golbal variable，所以會link error!
 
 大概就是這樣，詳細的話可以看[這裡](https://github.com/JuFengWu/techman_robot_grasp_ros2/tree/master/tm_gazebo_plugin)<br/>
