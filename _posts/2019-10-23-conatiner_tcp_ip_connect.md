@@ -28,7 +28,7 @@ layout: post
 可以這樣做完之後，保證還是連不起來，なぜ？<br/>
 問題在於port的設定阿～<br/>
 因為要把container的port和本機的port相連，也就是再一開始產生container的時候就要加上-p XX（本機port）:XX（container port）<br/>
-例えば： docker run -it -v /home/leowu/ros2:/root/ros2  -p 6080:80 -p 6189:6189 ros_env:ver1<br/>
+例えば：`` docker run -it -v /home/leowu/ros2:/root/ros2  -p 6080:80 -p 6189:6189 ros_env:ver1``<br/>
 這時可以看到，我把本機的6080和內部的80相連，本機的6189和內部的6189相連<br/>
 所以這時，外部就連 192.168.100.27 port為6189 就可以連起來了！<br/>
 
