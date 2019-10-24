@@ -1,12 +1,12 @@
 ---
-title: ros2 and ros1 bridge
+title: Ros2 and Ros1 bridge
 author: Jufeng Wu
 layout: post
 ---
 
 ----------------------
 今天要寫的是ROS2和ROS1之間的bridge<br/>
-也就是把ROS2的訊號跟ROS1護相對傳<br/>
+也就是把ROS2的訊號跟ROS1互相對傳<br/>
 
 作法很簡單，然而要注意一件事情，default的bridge只接受ros2的基礎資料傳送<br/>
 詳細可以看[這裡](https://github.com/ros2/common_interfaces)<br/>
